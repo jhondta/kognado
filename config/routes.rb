@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   get 'help', to: 'public#help'
   get 'about', to: 'public#about'
   get 'contact', to: 'public#contact'
+
+  # Defines the routes for the Devise User model
+  devise_for :users
 end
