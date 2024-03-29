@@ -2,6 +2,7 @@
 
 # PublicController is a controller for static pages that are publicly accessible.
 class PublicController < ApplicationController
+  layout 'public'
   skip_before_action :authenticate_user!
 
   def home; end

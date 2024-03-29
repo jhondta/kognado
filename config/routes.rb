@@ -8,7 +8,14 @@ Rails.application.routes.draw do
   get 'up' => 'rails/health#show', as: :rails_health_check
 
   # Defines the root path route ("/")
-  root 'public#home'
+  unauthenticated do
+    root 'public#home'
+  end
+
+  authenticated :user do
+    root 'dashboard#show', as: :authenticated_root
+  end
+
   get 'help', to: 'public#help'
   get 'about', to: 'public#about'
   get 'contact', to: 'public#contact'
