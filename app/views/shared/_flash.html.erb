@@ -1,7 +1,8 @@
 <% flash.each do |type, message| %>
   <% color = alert_color(type) %>
-  <div class="flex items-center p-4 mt-2 text-<%= color %>-800 rounded-lg bg-<%= color %>-50
-              dark:bg-gray-800 dark:text-<%= color %>-400 lg:max-w-7xl mx-auto"
+  <div class="flex items-center p-4 mt-2 text-<%= color %>-800 rounded-lg bg-<%= color %>-50 dark:bg-gray-800
+              dark:text-<%= color %>-400 lg:max-w-7xl mx-auto border border-<%= color %>-300
+              dark:border-<%= color %>-800"
        id="alert" role="alert">
     <svg class="flex-shrink-0 w-4 h-4" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
          fill="currentColor" viewBox="0 0 20 20">
