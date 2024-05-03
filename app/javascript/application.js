@@ -6,13 +6,17 @@ import "flowbite-datepicker"
 
 window.document.addEventListener('turbo:render', (_event) => {
     window.initFlowbite();
+    themeToggle();
+    showSidebar();
 });
 
 // Usar themeToggle en la recarga de la página
 document.addEventListener('DOMContentLoaded', function () {
     themeToggle();
+    showSidebar();
 });
 
+// Function to toggle between dark and light theme
 function themeToggle() {
     const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
     const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
@@ -56,4 +60,15 @@ function themeToggle() {
         }
 
     })
+}
+
+// Function to show the sidebar if the screen is larger than 768px
+function showSidebar() {
+    const sidebar = document.getElementById('drawer-navigation');
+    if (window.innerWidth > 768) {
+        sidebar.classList.remove('-translate-x-full');
+    }
+    if (window.innerWidth <= 768) {
+        sidebar.classList.add('-translate-x-full');
+    }
 }
