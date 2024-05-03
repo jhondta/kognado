@@ -8,13 +8,14 @@
   <%= stylesheet_link_tag "tailwind", "inter-font", "data-turbo-track": "reload" %>
 
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
+  
   <%= javascript_importmap_tags %>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet"/>
 </head>
 
-<body class="bg-gray-50 dark:bg-gray-800">
+<body class="antialiased bg-gray-50 dark:bg-gray-900">
 <%= render 'shared/navbar' %>
-<main class="bg-gray-50 dark:bg-gray-900">
+<main class="p-4 h-auto pt-20">
   <%= render "shared/flash" %>
   <%= yield %>
 </main>
