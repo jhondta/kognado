@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 module Users
+  # Controller for handling user unlocks
   class UnlocksController < Devise::UnlocksController
+    layout 'public'
+
     # GET /resource/unlock/new
     # def new
     #   super

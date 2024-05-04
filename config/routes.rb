@@ -21,5 +21,9 @@ Rails.application.routes.draw do
   get 'contact', to: 'public#contact'
 
   # Defines the routes for the Devise User model
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'users/sessions',
+                                    registrations: 'users/registrations',
+                                    passwords: 'users/passwords',
+                                    unlocks: 'users/unlocks',
+                                    confirmations: 'users/confirmations' }
 end

@@ -1,7 +1,10 @@
 # frozen_string_literal: true
 
 module Users
+  # Controller for handling user confirmations
   class ConfirmationsController < Devise::ConfirmationsController
+    layout 'public'
+
     # GET /resource/confirmation/new
     # def new
     #   super
