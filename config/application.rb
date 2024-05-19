@@ -26,5 +26,10 @@ module Kognado
     #
     # config.time_zone = "Central Time (US & Canada)"
     # config.eager_load_paths << Rails.root.join("extras")
+    #
+    # The default locale is :en and all translations from config/locales/*.rb,yml
+    # are auto loaded.
+    config.i18n.available_locales = %i[en es-MX]
+    config.i18n.default_locale = :en
   end
 end
