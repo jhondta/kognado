@@ -1,9 +1,13 @@
+<!-- User menu -->
 <button type="button" class="flex mx-3 text-sm bg-gray-800 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300
                              dark:focus:ring-gray-600"
-        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="dropdown">
-  <span class="sr-only">Open user menu</span>
+        id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown">
+  <span class="sr-only"><%= t('user_menu.sr.open_user_menu') %></span>
+  <!-- User image -->
   <!-- img class="w-8 h-8 rounded-full" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/michael-gough.png"
        alt="user photo"/ -->
+
+  <!-- User avatar SVG icon -->
   <div class="relative w-8 h-8 overflow-hidden bg-gray-100 rounded-full dark:bg-gray-600">
     <svg class="absolute w-10 h-10 text-gray-400 -left-1" fill="currentColor" viewBox="0 0 20 20"
          xmlns="http://www.w3.org/2000/svg">
@@ -13,27 +17,27 @@
   </div>
 </button>
 
+<!-- User menu dropdown -->
 <div class="hidden z-50 my-4 w-56 text-base list-none bg-white rounded divide-y divide-gray-100 shadow dark:bg-gray-700
-            dark:divide-gray-600 rounded-xl" id="dropdown">
+            dark:divide-gray-600 rounded-xl" id="user-dropdown">
   <div class="py-3 px-4">
     <%= content_tag :span, current_user.full_name, class: 'block text-sm font-semibold text-gray-900 dark:text-white' %>
     <%= content_tag :span, current_user.email, class: 'block text-sm text-gray-900 truncate dark:text-white' %>
   </div>
-  <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+  <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="user-dropdown">
     <li>
-      <%= link_to 'My profile', '#', class: 'block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600
-                                             dark:text-gray-400 dark:hover:text-white' %>
+      <%= link_to t('shared.navbar.links.my_profile'), '#',
+                  class: 'block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' %>
     </li>
     <li>
-      <%= link_to 'Account settings', edit_registration_path(current_user),
-                  class: 'block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600
-                          dark:text-gray-400 dark:hover:text-white' %>
+      <%= link_to t('shared.navbar.links.account_settings'), edit_registration_path(current_user),
+                  class: 'block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' %>
     </li>
   </ul>
-  <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="dropdown">
+  <ul class="py-1 text-gray-700 dark:text-gray-300" aria-labelledby="user-dropdown">
     <li>
-      <%= button_to 'Sign out', destroy_user_session_path, method: :delete,
-                    class: "block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white" %>
+      <%= button_to t('shared.navbar.links.logout'), destroy_user_session_path, method: :delete,
+                    class: 'block py-2 px-4 text-sm hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white' %>
     </li>
   </ul>
 </div>
