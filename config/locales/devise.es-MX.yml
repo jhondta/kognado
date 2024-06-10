@@ -34,6 +34,7 @@ es-MX:
       confirmed: "Se ha confirmado la dirección de correo electrónico correctamente."
       new:
         resend_confirmation_instructions: "Reenviar instrucciones de confirmación"
+        email_placeholder: "nombre@empresa.com"
       send_instructions: "En unos minutos recibirás un correo con instrucciones sobre cómo confirmar tu cuenta."
       send_paranoid_instructions: "Si tu correo existe en nuestra base de datos, en unos minutos recibirás un correo con instrucciones sobre cómo confirmar tu cuenta."
     failure:
@@ -86,6 +87,8 @@ es-MX:
       new:
         forgot_your_password: "¿Ha olvidado su contraseña?"
         send_me_reset_password_instructions: "Enviarme instrucciones para restablecer la contraseña"
+        email_placeholder: "nombre@empresa.com"
+        sign_in: "Iniciar sesión"
       no_token: "No puedes acceder a esta página si no es a través de un enlace para restablecer tu contraseña. Si has llegado hasta aquí desde el correo para restablecer tu contraseña, por favor asegúrate de que la URL introducida está completa."
       send_instructions: "En unos minutos recibirás un correo con instrucciones sobre cómo restablecer tu contraseña."
       send_paranoid_instructions: "Si tu correo existe en nuestra base de datos, recibirás en tu bandeja de entrada un correo con instrucciones sobre cómo restablecer tu contraseña."
@@ -103,8 +106,12 @@ es-MX:
         update: "Actualizar"
         we_need_your_current_password_to_confirm_your_changes: "necesitamos su contraseña actual para confirmar los cambios"
         email_placeholder: "nombre@empresa.com"
+        back: "Atras"
       new:
         sign_up: "Registrarse"
+        email_placeholder: "nombre@empresa.com"
+        sign_in: "Iniciar sesión"
+        confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
       signed_up: "Bienvenido. Tu cuenta ha sido creada."
       signed_up_but_inactive: "Tu cuenta ha sido creada exitosamente. Sin embargo, no puedes iniciar sesión ya que tu cuenta aún no está activada."
       signed_up_but_locked: "Tu cuenta ha sido creada correctamente. Sin embargo, no es posible iniciar la sesión porque que tu cuenta se encuentra bloqueada."
@@ -116,6 +123,8 @@ es-MX:
       already_signed_out: "Se ha cerrado la sesión con éxito."
       new:
         sign_in: "Iniciar sesión"
+        email_placeholder: "nombre@empresa.com"
+        forgot_your_password: "¿Olvidó su contraseña?"
       signed_in: "Sesión iniciada."
       signed_out: "Sesión finalizada."
       email_placeholder: "nombre@empresa.com"
@@ -134,6 +143,8 @@ es-MX:
     unlocks:
       new:
         resend_unlock_instructions: "Reenviar instrucciones para desbloquear la cuenta"
+        email_placeholder: "nombre@empresa.com"
+        sign_in: "Iniciar sesión"
       send_instructions: "En unos minutos recibirás instrucciones para desbloquear tu cuenta."
       send_paranoid_instructions: "Si tu cuenta existe, en unos minutos recibirás instrucciones para desbloquear tu cuenta."
       unlocked: "Tu cuenta ha sido desbloqueada. Ya puedes iniciar sesión."
