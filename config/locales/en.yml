@@ -47,3 +47,6 @@ en:
     flash:
       sr:
         close: "Close"
+    sidebar:
+      links:
+        dashboard: "Dashboard"

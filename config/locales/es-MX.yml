@@ -236,3 +236,6 @@ es-MX:
     flash:
       sr:
         close: "Cerrar"
+    sidebar:
+      links:
+        dashboard: "Panel"
