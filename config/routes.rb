@@ -26,4 +26,6 @@ Rails.application.routes.draw do
                                     passwords: 'users/passwords',
                                     unlocks: 'users/unlocks',
                                     confirmations: 'users/confirmations' }
+
+  resources :asset_types
 end
