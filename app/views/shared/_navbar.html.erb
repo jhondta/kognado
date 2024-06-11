@@ -23,8 +23,8 @@
 
       <% if user_signed_in? %>
         <!-- TODO: Add notifications and apps logic -->
-        <%= render 'shared/navbar/notifications' if false %>
-        <%= render 'shared/navbar/apps' if false %>
+        <% render 'shared/navbar/notifications' %>
+        <% render 'shared/navbar/apps' %>
         <%= render 'shared/navbar/user_menu' %>
       <% else %>
         <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row 
