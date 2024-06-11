@@ -1,0 +1,17 @@
+es-MX:
+  activerecord:
+    models:
+      user:
+        one: "Usuario"
+        other: "Usuarios"
+      asset_type:
+        one: "Tipo de activo"
+        other: "Tipos de activo"
+    attributes:
+      user:
+        name: "Nombre"
+        email: "Correo electrónico"
+      asset_type:
+        name: "Nombre"
+        description: "Descripción"
+          

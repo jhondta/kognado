@@ -1,0 +1,16 @@
+en:
+  activerecord:
+    models:
+      user:
+        one: "User"
+        other: "Users"
+      asset_type:
+        one: "Asset type"
+        other: "Asset types"
+    attributes:
+      user:
+        name: "Name"
+        email: "Email"
+      asset_type:
+        name: "Name"
+        description: "Description"
