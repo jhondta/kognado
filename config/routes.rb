@@ -28,4 +28,5 @@ Rails.application.routes.draw do
                                     confirmations: 'users/confirmations' }
 
   resources :asset_types
+  resources :locations
 end

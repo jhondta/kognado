@@ -7,6 +7,9 @@ es-MX:
       asset_type:
         one: "Tipo de activo"
         other: "Tipos de activo"
+      location:
+        one: "Ubicación"
+        other: "Ubicaciones"
     attributes:
       user:
         name: "Nombre"
@@ -14,4 +17,6 @@ es-MX:
       asset_type:
         name: "Nombre"
         description: "Descripción"
-          
+      location:
+        name: "Nombre"
+        description: "Descripción"

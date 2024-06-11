@@ -75,10 +75,12 @@
           </a>
         </li>
         <li>
-          <a href="#" class="flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg
-                               transition duration-75 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">
-            Ubicaciones
-          </a>
+          <%= link_to locations_path,
+                      class: "flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg 
+                              transition duration-75 group hover:bg-gray-100 dark:text-white 
+                              dark:hover:bg-gray-700" do %>
+            <%= t('activerecord.models.location.other') %>
+          <% end %>
         </li>
       </ul>
     </li>

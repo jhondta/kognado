@@ -7,10 +7,16 @@ en:
       asset_type:
         one: "Asset type"
         other: "Asset types"
+      location:
+        one: "Location"
+        other: "Locations"
     attributes:
       user:
         name: "Name"
         email: "Email"
       asset_type:
+        name: "Name"
+        description: "Description"
+      location:
         name: "Name"
         description: "Description"
