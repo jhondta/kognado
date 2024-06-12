@@ -1,0 +1,23 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  asset_type: one
+  serial_number: MyString
+  purchase_date: 2024-06-10
+  warranty_expiry: 2024-06-10
+  location: one
+  status: MyString
+  manufacturer: MyString
+  model: MyString
+
+two:
+  name: MyString
+  asset_type: two
+  serial_number: MyString
+  purchase_date: 2024-06-10
+  warranty_expiry: 2024-06-10
+  location: two
+  status: MyString
+  manufacturer: MyString
+  model: MyString

@@ -29,4 +29,5 @@ Rails.application.routes.draw do
 
   resources :asset_types
   resources :locations
+  resources :equipment
 end

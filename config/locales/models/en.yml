@@ -10,6 +10,9 @@ en:
       location:
         one: "Location"
         other: "Locations"
+      equipment:
+        one: "Equipment"
+        other: "Equipment"
     attributes:
       user:
         name: "Name"
@@ -20,3 +23,13 @@ en:
       location:
         name: "Name"
         description: "Description"
+      equipment:
+        name: "Name"
+        asset_type: "Asset type"
+        serial_number: "Serial number"
+        purchase_date: "Purchase date"
+        warranty_expiry: "Warranty expiry"
+        location: "Location"
+        status: "Status"
+        manufacturer: "Manufacturer"
+        model: "Model"
