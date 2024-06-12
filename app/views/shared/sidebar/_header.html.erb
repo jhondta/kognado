@@ -60,29 +60,23 @@
       </button>
       <ul id="dropdown-pages" class="hidden py-2 space-y-2">
         <li>
-          <%= link_to asset_types_path,
+          <%= link_to t('activerecord.models.asset_type.other'), asset_types_path,
                       class: "flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg 
                               transition duration-75 group hover:bg-gray-100 dark:text-white 
-                              dark:hover:bg-gray-700" do %>
-            <%= t('activerecord.models.asset_type.other') %>
-          <% end %>
+                              dark:hover:bg-gray-700" %>
 
         </li>
         <li>
-          <%= link_to equipment_index_path,
+          <%= link_to t('activerecord.models.equipment.other'), equipment_index_path,
                       class: "flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg 
                               transition duration-75 group hover:bg-gray-100 dark:text-white 
-                              dark:hover:bg-gray-700" do %>
-            <%= t('activerecord.models.equipment.other') %>
-          <% end %>
+                              dark:hover:bg-gray-700" %>
         </li>
         <li>
-          <%= link_to locations_path,
+          <%= link_to t('activerecord.models.location.other'), locations_path,
                       class: "flex items-center p-2 pl-11 w-full text-base font-medium text-gray-900 rounded-lg 
                               transition duration-75 group hover:bg-gray-100 dark:text-white 
-                              dark:hover:bg-gray-700" do %>
-            <%= t('activerecord.models.location.other') %>
-          <% end %>
+                              dark:hover:bg-gray-700" %>
         </li>
       </ul>
     </li>
