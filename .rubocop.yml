@@ -1,17 +1,33 @@
-require: rubocop-rails
+# Omakase Ruby styling for Rails
+inherit_gem: { rubocop-rails-omakase: rubocop.yml }
 
-AllCops:
-  NewCops: enable
+# Overwrite or add rules to create your own house style
+#
+# # Use `[a, [b, c]]` not `[ a, [ b, c ] ]`
+# Layout/SpaceInsideArrayLiteralBrackets:
+#   Enabled: false
 
-Metrics/BlockLength:
-  Exclude:
-    - 'config/environments/*.rb'
-    - 'config/initializers/devise.rb'
+Style/FrozenStringLiteralComment:
+  Enabled: true
 
-Metrics/MethodLength:
-  Exclude:
-    - 'db/**/*'
+Style/SymbolArray:
+  EnforcedStyle: percent
+  Enabled: true
+  SupportedStyles:
+    - percent
+    - array
 
-Metrics/AbcSize:
-  Exclude:
-    - 'db/**/*'
+Style/StringLiterals:
+  EnforcedStyle: single_quotes
+  SupportedStyles:
+    - single_quotes
+    - double_quotes
+  ConsistentQuotesInMultiline: false
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space
+  EnforcedStyleForEmptyBrackets: no_space
+  SupportedStyles:
+    - space
+    - no_space
+    - compact
