@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AssetTypesController < ApplicationController
   before_action :set_asset_type, only: %i[ show edit update destroy ]
 
@@ -25,7 +27,7 @@ class AssetTypesController < ApplicationController
 
     respond_to do |format|
       if @asset_type.save
-        format.html { redirect_to asset_type_url(@asset_type), notice: "Asset type was successfully created." }
+        format.html { redirect_to asset_type_url(@asset_type), notice: 'Asset type was successfully created.' }
         format.json { render :show, status: :created, location: @asset_type }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +40,7 @@ class AssetTypesController < ApplicationController
   def update
     respond_to do |format|
       if @asset_type.update(asset_type_params)
-        format.html { redirect_to asset_type_url(@asset_type), notice: "Asset type was successfully updated." }
+        format.html { redirect_to asset_type_url(@asset_type), notice: 'Asset type was successfully updated.' }
         format.json { render :show, status: :ok, location: @asset_type }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,7 +54,7 @@ class AssetTypesController < ApplicationController
     @asset_type.destroy!
 
     respond_to do |format|
-      format.html { redirect_to asset_types_url, notice: "Asset type was successfully destroyed." }
+      format.html { redirect_to asset_types_url, notice: 'Asset type was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
