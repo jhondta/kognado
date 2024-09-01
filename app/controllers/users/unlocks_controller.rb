@@ -3,7 +3,6 @@
 module Users
   # Controller for handling user unlocks
   class UnlocksController < Devise::UnlocksController
-
     # GET /resource/unlock/new
     # def new
     #   super

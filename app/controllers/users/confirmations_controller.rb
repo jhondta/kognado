@@ -3,7 +3,6 @@
 module Users
   # Controller for handling user confirmations
   class ConfirmationsController < Devise::ConfirmationsController
-
     # GET /resource/confirmation/new
     # def new
     #   super
