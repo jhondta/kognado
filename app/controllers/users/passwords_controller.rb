@@ -3,7 +3,6 @@
 module Users
   # Controller for handling password resets
   class PasswordsController < Devise::PasswordsController
-    layout 'public'
 
     # GET /resource/password/new
     # def new

@@ -78,6 +78,7 @@ function showSidebar() {
             sidebar.classList.add('-translate-x-full');
         }
     } else {
-        console.error('sidebar element not found');
+        // No enviar error si no se encuentra el elemento
+        return;
     }
 }

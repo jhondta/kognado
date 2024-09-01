@@ -3,7 +3,6 @@
 module Users
   # Controller for handling user sessions
   class SessionsController < Devise::SessionsController
-    layout 'public'
 
     # before_action :configure_sign_in_params, only: [:create]
 
