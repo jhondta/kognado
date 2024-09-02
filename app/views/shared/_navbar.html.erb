@@ -7,7 +7,7 @@
       <%= render 'shared/navbar/sidebar_toggle' if user_signed_in? %>
       <!-- Logo -->
       <%= link_to root_path, class: "flex items-center justify-between mr-4" do %>
-        <%= image_tag 'kognado_logo_bgl.png', class: "mr-3 h-8", alt: "Kognado Logo" %>
+        <%= image_tag 'kognado_logo.svg', class: "mr-3 h-8", alt: "Kognado Logo" %>
         <%= content_tag :span, full_title, class: "self-center text-2xl font-semibold whitespace-nowrap dark:text-white 
                                                    hidden md:block app-title" %>
       <% end %>
