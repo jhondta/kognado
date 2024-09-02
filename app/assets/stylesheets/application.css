@@ -3,7 +3,7 @@
 /* Rubik Variable Font */
 @font-face {
     font-family: 'Rubik';
-    src: url('Rubik-VariableFont_wght.ttf') format('truetype-variations');
+    src: url('Rubik-Latin-Normal.woff2') format('woff2');
     font-weight: 300 900;
     font-style: normal;
 }
@@ -11,7 +11,7 @@
 /* Rubik Variable Italic Font */
 @font-face {
     font-family: 'Rubik';
-    src: url('Rubik-Italic-VariableFont_wght.ttf') format('truetype-variations');
+    src: url('Rubik-Latin-Italic.woff2') format('woff2');
     font-weight: 300 900;
     font-style: italic;
 }
@@ -19,7 +19,7 @@
 /* Open Sans Variable Font */
 @font-face {
     font-family: 'Open Sans';
-    src: url('OpenSans-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    src: url('OpenSans-Latin-Normal.woff2') format('woff2');
     font-weight: 300 800;
     font-style: normal;
 }
@@ -27,7 +27,7 @@
 /* Open Sans Variable Italic Font */
 @font-face {
     font-family: 'Open Sans';
-    src: url('OpenSans-Italic-VariableFont_wdth,wght.ttf') format('truetype-variations');
+    src: url('OpenSans-Latin-Italic.woff2') format('woff2');
     font-weight: 300 800;
     font-style: italic;
 }
