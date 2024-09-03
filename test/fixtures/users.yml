@@ -4,8 +4,44 @@
 # model remove the "{}" from the fixture names and add the columns immediately
 # below each fixture, per the syntax in the comments below
 #
-one: {}
-# column: value
-#
-two: {}
-# column: value
+one:
+  email: 'one@app.com'
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  reset_password_token: 'one'
+  reset_password_sent_at: '2021-01-01 00:00:00'
+  remember_created_at: '2021-01-01 00:00:00'
+  sign_in_count: 1
+  current_sign_in_at: '2021-01-01 00:00:00'
+  last_sign_in_at: '2021-01-01 00:00:00'
+  current_sign_in_ip: '127.0.0.1'
+  last_sign_in_ip: '127.0.0.1'
+  confirmation_token: 'one'
+  confirmed_at: '2021-01-01 00:00:00'
+  confirmation_sent_at: '2021-01-01 00:00:00'
+  unconfirmed_email: 'uone@app.com'
+  failed_attempts: 0
+  unlock_token: 'one'
+  locked_at: '2021-01-01 00:00:00'
+  created_at: '2021-01-01 00:00:00'
+  updated_at: '2021-01-01 00:00:00'
+
+two:
+  email: 'two@app.com'
+  encrypted_password: <%= Devise::Encryptor.digest(User, 'password') %>
+  reset_password_token: 'two'
+  reset_password_sent_at: '2021-01-01 00:00:00'
+  remember_created_at: '2021-01-01 00:00:00'
+  sign_in_count: 1
+  current_sign_in_at: '2021-01-01 00:00:00'
+  last_sign_in_at: '2021-01-01 00:00:00'
+  current_sign_in_ip: '127.0.0.1'
+  last_sign_in_ip: '127.0.0.1'
+  confirmation_token: 'two'
+  confirmed_at: '2021-01-01 00:00:00'
+  confirmation_sent_at: '2021-01-01 00:00:00'
+  unconfirmed_email: 'utwo@app.com'
+  failed_attempts: 0
+  unlock_token: 'two'
+  locked_at: '2021-01-01 00:00:00'
+  created_at: '2021-01-01 00:00:00'
+  updated_at: '2021-01-01 00:00:00'
