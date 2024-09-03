@@ -4,32 +4,7 @@ es-MX:
       user:
         one: "Usuario"
         other: "Usuarios"
-      asset_type:
-        one: "Tipo de activo"
-        other: "Tipos de activo"
-      location:
-        one: "Ubicación"
-        other: "Ubicaciones"
-      equipment:
-        one: "Equipo"
-        other: "Equipos"
     attributes:
       user:
         name: "Nombre"
         email: "Correo electrónico"
-      asset_type:
-        name: "Nombre"
-        description: "Descripción"
-      location:
-        name: "Nombre"
-        description: "Descripción"
-      equipment:
-        name: "Nombre"
-        asset_type_id: "Tipo de activo"
-        serial_number: "Número de serie"
-        purchase_date: "Fecha de compra"
-        warranty_expiry: "Vencimiento de garantía"
-        location_id: "Ubicación"
-        status: "Estado"
-        manufacturer: "Fabricante"
-        model: "Modelo"
