@@ -44,6 +44,11 @@ en:
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
+      edit:
+        change_your_password: "Change your password"
+        new_password: "New password"
+        confirm_new_password: "Confirm new password"
+        change_my_password: "Change my password"
     registrations:
       edit:
         are_you_sure: "Are you sure?"
@@ -80,6 +85,8 @@ en:
         sign_in: "Sign in"
         sign_in_with_provider: "Sign in with %{provider}"
         sign_up: "Sign up"
+      minimum_password_length:
+        other: "(%{count} characters minimum)"
     unlocks:
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
