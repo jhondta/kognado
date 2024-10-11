@@ -11,11 +11,12 @@ Rails.application.routes.draw do
   get 'service-worker' => 'rails/pwa#service_worker', as: :pwa_service_worker
   get 'manifest' => 'rails/pwa#manifest', as: :pwa_manifest
 
-  # Defines the root path route ("/")
+  # Defines the unauthenticated root path route ("/")
   unauthenticated do
     root 'public#home'
   end
 
+  # Defines the authenticated root path route ("/") for the User model
   authenticated :user do
     root 'dashboard#show', as: :authenticated_root
   end
@@ -30,4 +31,13 @@ Rails.application.routes.draw do
                                     passwords: 'users/passwords',
                                     unlocks: 'users/unlocks',
                                     confirmations: 'users/confirmations' }
+
+  # Defines the resources
+  resources :country_languages
+  resources :country_timezones
+  resources :country_currencies
+  resources :languages
+  resources :timezones
+  resources :currencies
+  resources :countries
 end
