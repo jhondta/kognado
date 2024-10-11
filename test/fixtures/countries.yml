@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  common_name: MyString
+  official_name: MyString
+  iso_code2: MyString
+  iso_code3: MyString
+  phone_code: MyString
+  tld: MyString
+  flag: MyString
+
+two:
+  common_name: MyString
+  official_name: MyString
+  iso_code2: MyString
+  iso_code3: MyString
+  phone_code: MyString
+  tld: MyString
+  flag: MyString

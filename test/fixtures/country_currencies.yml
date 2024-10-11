@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  country: one
+  currency: one
+  is_primary: false
+
+two:
+  country: two
+  currency: two
+  is_primary: false
