@@ -19,9 +19,10 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_09_165711) do
     t.string "official_name", limit: 100, null: false
     t.string "iso_code2", limit: 2, null: false
     t.string "iso_code3", limit: 3, null: false
-    t.string "phone_code", limit: 5, null: false
+    t.string "phone_code", limit: 10, null: false
     t.string "tld", limit: 5, null: false
-    t.string "flag", null: false
+    t.text "flag_svg", null: false
+    t.binary "flag_png", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["common_name"], name: "index_countries_on_common_name", unique: true

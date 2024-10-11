@@ -31,7 +31,12 @@
 
   <p class="my-5">
     <strong class="block font-medium mb-1">Flag:</strong>
-    <%= country.flag %>
+    <%= country.flag_svg.html_safe %>
+  </p>
+
+  <p class="my-5">
+    <strong class="block font-medium mb-1">Flag:</strong>
+    <%= country.flag_png.html_safe %>
   </p>
 
 </div>

@@ -151,7 +151,8 @@ module Seeds
           iso_code3: country_data['cca3'],
           phone_code: phone_code,
           tld: tld,
-          flag: Seeds::Utilities.download_svg(country_data['flags']['svg'])
+          flag_svg: Seeds::Utilities.download_image(country_data['flags'], 'svg'),
+          flag_png: Seeds::Utilities.download_image(country_data['flags'], 'png'),
         )
       end
     end
@@ -190,7 +191,7 @@ module Seeds
     #
     def self.phone_code(phone_data)
       root = phone_data.dig('root') || ''
-      first_suffix = phone_data.dig('idd', 'suffixes')&.first || ''
+      first_suffix = phone_data.dig('suffixes')&.first || ''
       "#{root}#{first_suffix}"
     end
   end
