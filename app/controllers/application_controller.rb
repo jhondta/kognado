@@ -7,4 +7,5 @@ class ApplicationController < ActionController::Base
 
   before_action :authenticate_user!
   include HttpAcceptLanguage::AutoLocale
+  include Pagy::Backend
 end
