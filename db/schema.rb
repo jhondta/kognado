@@ -10,9 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_09_165711) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_15_011058) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "active_storage_attachments", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "record_type", null: false
+    t.bigint "record_id", null: false
+    t.bigint "blob_id", null: false
+    t.datetime "created_at", null: false
+    t.index ["blob_id"], name: "index_active_storage_attachments_on_blob_id"
+    t.index ["record_type", "record_id", "name", "blob_id"], name: "index_active_storage_attachments_uniqueness", unique: true
+  end
+
+  create_table "active_storage_blobs", force: :cascade do |t|
+    t.string "key", null: false
+    t.string "filename", null: false
+    t.string "content_type"
+    t.text "metadata"
+    t.string "service_name", null: false
+    t.bigint "byte_size", null: false
+    t.string "checksum"
+    t.datetime "created_at", null: false
+    t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
+  end
+
+  create_table "active_storage_variant_records", force: :cascade do |t|
+    t.bigint "blob_id", null: false
+    t.string "variation_digest", null: false
+    t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
+  end
 
   create_table "countries", force: :cascade do |t|
     t.string "common_name", limit: 100, null: false
@@ -87,6 +115,23 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_09_165711) do
     t.index ["name"], name: "index_timezones_on_name", unique: true
   end
 
+  create_table "user_profiles", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "first_name", limit: 255, null: false
+    t.string "last_name", limit: 255, null: false
+    t.date "date_of_birth", null: false
+    t.bigint "country_id", null: false
+    t.string "gender", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["country_id"], name: "index_user_profiles_on_country_id"
+    t.index ["date_of_birth"], name: "index_user_profiles_on_date_of_birth"
+    t.index ["first_name"], name: "index_user_profiles_on_first_name"
+    t.index ["gender"], name: "index_user_profiles_on_gender"
+    t.index ["last_name"], name: "index_user_profiles_on_last_name"
+    t.index ["user_id"], name: "index_user_profiles_on_user_id", unique: true
+  end
+
   create_table "users", force: :cascade do |t|
     t.string "email", null: false
     t.string "encrypted_password", null: false
@@ -113,10 +158,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_09_165711) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true
   end
 
+  add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "country_currencies", "countries"
   add_foreign_key "country_currencies", "currencies"
   add_foreign_key "country_languages", "countries"
   add_foreign_key "country_languages", "languages"
   add_foreign_key "country_timezones", "countries"
   add_foreign_key "country_timezones", "timezones"
+  add_foreign_key "user_profiles", "countries"
+  add_foreign_key "user_profiles", "users"
 end
