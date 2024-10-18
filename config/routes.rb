@@ -1,7 +1,6 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :user_profiles
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
@@ -27,11 +26,16 @@ Rails.application.routes.draw do
   get 'contact', to: 'public#contact'
 
   # Defines the routes for the Devise User model
-  devise_for :users, controllers: { sessions: 'users/sessions',
-                                    registrations: 'users/registrations',
-                                    passwords: 'users/passwords',
-                                    unlocks: 'users/unlocks',
-                                    confirmations: 'users/confirmations' }
+  devise_for :users,
+             controllers: { sessions: 'users/sessions',
+                            registrations: 'users/registrations',
+                            passwords: 'users/passwords',
+                            unlocks: 'users/unlocks',
+                            confirmations: 'users/confirmations' },
+             path: '',
+             path_names: { sign_in: 'login',
+                           sign_out: 'logout',
+                           sign_up: 'signup' }
 
   # Defines the resources
   resources :country_languages
@@ -41,4 +45,5 @@ Rails.application.routes.draw do
   resources :timezones
   resources :currencies
   resources :countries
+  resources :user_profiles
 end
