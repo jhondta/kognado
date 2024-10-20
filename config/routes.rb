@@ -38,6 +38,8 @@ Rails.application.routes.draw do
                            sign_up: 'signup' }
 
   # Defines the resources
+  resources :measure_unit_types
+  resources :measure_units
   resources :country_languages
   resources :country_timezones
   resources :country_currencies
