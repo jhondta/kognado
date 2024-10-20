@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_20_111258) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_20_120650) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -102,6 +102,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_111258) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["name"], name: "index_inventory_categories_on_name", unique: true
+  end
+
+  create_table "inventory_item_categories", force: :cascade do |t|
+    t.bigint "inventory_item_id", null: false
+    t.bigint "inventory_category_id", null: false
+    t.index ["inventory_category_id"], name: "index_inventory_item_categories_on_inventory_category_id"
+    t.index ["inventory_item_id", "inventory_category_id"], name: "idx_on_inventory_item_id_inventory_category_id_7c7e8d6305", unique: true
+    t.index ["inventory_item_id"], name: "index_inventory_item_categories_on_inventory_item_id"
   end
 
   create_table "inventory_items", force: :cascade do |t|
@@ -211,6 +219,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_111258) do
   add_foreign_key "country_languages", "languages"
   add_foreign_key "country_timezones", "countries"
   add_foreign_key "country_timezones", "timezones"
+  add_foreign_key "inventory_item_categories", "inventory_categories"
+  add_foreign_key "inventory_item_categories", "inventory_items"
   add_foreign_key "inventory_items", "measure_units"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"

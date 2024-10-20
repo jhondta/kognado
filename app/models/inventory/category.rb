@@ -2,6 +2,8 @@
 
 class Inventory::Category < ApplicationRecord
   # Associations
+  has_many :item_categories
+  has_many :items, through: :item_categories
 
   # Validations
   validates :name, :description, presence: true

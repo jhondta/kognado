@@ -3,6 +3,8 @@
 class Inventory::Item < ApplicationRecord
   # Associations
   belongs_to :measure_unit
+  has_many :item_categories
+  has_many :categories, through: :item_categories
 
   # Validations
   validates :name, :sku, :description, presence: true
