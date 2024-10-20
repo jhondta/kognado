@@ -48,4 +48,10 @@ Rails.application.routes.draw do
   resources :currencies
   resources :countries
   resources :user_profiles
+
+  namespace :inventory do
+    resources :items
+    resources :warehouses
+    resources :categories
+  end
 end

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_20_024149) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_20_111258) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -94,6 +94,34 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_024149) do
     t.datetime "updated_at", null: false
     t.index ["iso_code"], name: "index_currencies_on_iso_code", unique: true
     t.index ["name"], name: "index_currencies_on_name", unique: true
+  end
+
+  create_table "inventory_categories", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.string "description", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_inventory_categories_on_name", unique: true
+  end
+
+  create_table "inventory_items", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.string "sku", limit: 100, null: false
+    t.text "description", null: false
+    t.bigint "measure_unit_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["measure_unit_id"], name: "index_inventory_items_on_measure_unit_id"
+    t.index ["name"], name: "index_inventory_items_on_name"
+    t.index ["sku"], name: "index_inventory_items_on_sku", unique: true
+  end
+
+  create_table "inventory_warehouses", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.string "location", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_inventory_warehouses_on_name", unique: true
   end
 
   create_table "languages", force: :cascade do |t|
@@ -183,6 +211,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_024149) do
   add_foreign_key "country_languages", "languages"
   add_foreign_key "country_timezones", "countries"
   add_foreign_key "country_timezones", "timezones"
+  add_foreign_key "inventory_items", "measure_units"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"
