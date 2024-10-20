@@ -3,7 +3,7 @@
 class Inventory::Item < ApplicationRecord
   # Associations
   belongs_to :measure_unit
-  has_many :item_categories
+  has_many :item_categories, class_name: 'Inventory::ItemCategory', foreign_key: :inventory_item_id
   has_many :categories, through: :item_categories
 
   # Validations

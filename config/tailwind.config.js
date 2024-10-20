@@ -13,6 +13,10 @@ module.exports = {
             fontFamily: {
                 sans: ['Open Sans', ...defaultTheme.fontFamily.sans],
             },
+            colors: {
+                primary: '#4CA9EE',
+                secondary: '#5ECD81',
+            }
         },
     },
     plugins: [

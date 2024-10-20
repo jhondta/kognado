@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_20_120650) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_20_122522) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -124,6 +124,20 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_120650) do
     t.index ["sku"], name: "index_inventory_items_on_sku", unique: true
   end
 
+  create_table "inventory_stocks", force: :cascade do |t|
+    t.bigint "inventory_item_id", null: false
+    t.bigint "inventory_warehouse_id", null: false
+    t.integer "quantity", default: 0, null: false
+    t.integer "minimum", default: 0, null: false
+    t.integer "maximum", default: 0, null: false
+    t.integer "reorder_quantity", default: 0, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["inventory_item_id", "inventory_warehouse_id"], name: "idx_on_inventory_item_id_inventory_warehouse_id_11cdfb23dd", unique: true
+    t.index ["inventory_item_id"], name: "index_inventory_stocks_on_inventory_item_id"
+    t.index ["inventory_warehouse_id"], name: "index_inventory_stocks_on_inventory_warehouse_id"
+  end
+
   create_table "inventory_warehouses", force: :cascade do |t|
     t.string "name", limit: 100, null: false
     t.string "location", limit: 255, null: false
@@ -222,6 +236,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_120650) do
   add_foreign_key "inventory_item_categories", "inventory_categories"
   add_foreign_key "inventory_item_categories", "inventory_items"
   add_foreign_key "inventory_items", "measure_units"
+  add_foreign_key "inventory_stocks", "inventory_items"
+  add_foreign_key "inventory_stocks", "inventory_warehouses"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"

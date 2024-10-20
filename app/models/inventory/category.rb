@@ -2,7 +2,7 @@
 
 class Inventory::Category < ApplicationRecord
   # Associations
-  has_many :item_categories
+  has_many :item_categories, class_name: 'Inventory::ItemCategory'
   has_many :items, through: :item_categories
 
   # Validations
