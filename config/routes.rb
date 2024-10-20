@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   resources :user_profiles
 
   namespace :inventory do
+    resources :warehouses
     resources :categories
   end
 end
