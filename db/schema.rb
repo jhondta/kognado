@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_15_011058) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_20_103259) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -96,6 +96,14 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_15_011058) do
     t.index ["name"], name: "index_currencies_on_name", unique: true
   end
 
+  create_table "inventory_categories", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.string "description", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_inventory_categories_on_name", unique: true
+  end
+
   create_table "languages", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.string "iso_code2", limit: 2, null: false
@@ -105,6 +113,23 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_15_011058) do
     t.index ["iso_code2"], name: "index_languages_on_iso_code2", unique: true
     t.index ["iso_code3"], name: "index_languages_on_iso_code3", unique: true
     t.index ["name"], name: "index_languages_on_name", unique: true
+  end
+
+  create_table "measure_unit_types", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_measure_unit_types_on_name", unique: true
+  end
+
+  create_table "measure_units", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.string "abbreviation", limit: 64, null: false
+    t.bigint "measure_unit_type_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["measure_unit_type_id"], name: "index_measure_units_on_measure_unit_type_id"
+    t.index ["name"], name: "index_measure_units_on_name", unique: true
   end
 
   create_table "timezones", force: :cascade do |t|
@@ -166,6 +191,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_15_011058) do
   add_foreign_key "country_languages", "languages"
   add_foreign_key "country_timezones", "countries"
   add_foreign_key "country_timezones", "timezones"
+  add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"
 end
