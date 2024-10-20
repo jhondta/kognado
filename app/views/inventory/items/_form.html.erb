@@ -28,7 +28,8 @@
 
   <div class="my-5">
     <%= form.label :measure_unit_id %>
-    <%= form.text_field :measure_unit_id, class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
+    <%= form.collection_select :measure_unit_id, MeasureUnit.all, :id, :name, {},
+                               class: "block shadow rounded-md border border-gray-400 outline-none px-3 py-2 mt-2 w-full" %>
   </div>
 
   <div class="inline">
