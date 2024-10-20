@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <title><%= content_for(:title) || "Kognado" %></title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -13,18 +13,22 @@
   <link rel="icon" href="/icon.png" type="image/png">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="/icon.png">
-  
+
   <%= stylesheet_link_tag "tailwind", "data-turbo-track": "reload" %>
   <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   <%= javascript_importmap_tags %>
 </head>
 
-<body class="antialiased bg-gray-50 dark:bg-gray-900">
+<body class="antialiased bg-gray-50 dark:bg-gray-800">
 <%= render 'shared/navbar' %>
-<%= render 'shared/sidebar' if current_user %>
-<main class="p-4 h-auto pt-20 <%= 'md:ml-64' if current_user %>">
-  <%= render "shared/flash" %>
-  <%= yield %>
-</main>
+<div class="flex pt-16 overflow-hidden bg-gray-50 dark:bg-gray-900">
+  <%= render 'shared/sidebar' if current_user %>
+  <div id="main-content" class="relative w-full h-full overflow-y-auto bg-gray-50 lg:ml-64 dark:bg-gray-900">
+    <main class="<%= 'md:ml-64' if current_user %>">
+      <%= render "shared/flash" %>
+      <%= yield %>
+    </main>
+  </div>
+</div>
 </body>
 </html>

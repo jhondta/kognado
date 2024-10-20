@@ -1,42 +1,32 @@
-<!-- Navigation -->
-<nav class="bg-white border-b border-gray-200 px-4 py-2.5 dark:bg-gray-800 dark:border-gray-700 fixed left-0 right-0
-            top-0 z-50">
-  <div class="flex justify-between items-center">
-    <div class="flex justify-start items-center">
-      <!-- Sidebar toggle -->
-      <%= render 'shared/navbar/sidebar_toggle' if user_signed_in? %>
-      <!-- Logo -->
-      <%= link_to root_path, class: "flex items-center justify-between mr-4" do %>
-        <%= image_tag 'kognado_logo.svg', class: "mr-3 h-8", alt: "Kognado Logo" %>
-        <%= content_tag :span, full_title, class: "self-center text-2xl font-semibold whitespace-nowrap dark:text-white 
-                                                   hidden md:block app-title" %>
-      <% end %>
-      <!-- Search form -->
-      <%= render 'shared/navbar/search' if user_signed_in? %>
-    </div>
+<nav class="fixed z-30 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
+  <div class="px-3 py-3 lg:px-5 lg:pl-3">
+    <div class="flex items-center justify-between">
+      <div class="flex items-center justify-start">
+        <%= render 'shared/navbar/sidebar_toggle' %>
+        <%= render 'shared/navbar/logo' %>
+        <%= render 'shared/navbar/search' if user_signed_in? %>
+      </div>
 
-    <div class="flex items-center">
-      <!-- Search toggle -->
-      <%= render 'shared/navbar/search_toggle' if user_signed_in? %>
-      <!-- Theme toggle -->
-      <%= render 'shared/navbar/theme_toggle' %>
+      <div class="flex items-center">
+        <%= render 'shared/navbar/search_toggle' %>
+        <%= render 'shared/navbar/notifications' %>
+        <%= render 'shared/navbar/apps' %>
+        <%= render 'shared/navbar/theme_toggle' %>
 
-      <% if user_signed_in? %>
-        <!-- TODO: Add notifications and apps logic -->
-        <% render 'shared/navbar/notifications' %>
-        <% render 'shared/navbar/apps' %>
-        <%= render 'shared/navbar/user_menu' %>
-      <% else %>
-        <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row 
+        <% if user_signed_in? %>
+          <%= render 'shared/navbar/user_menu' %>
+        <% else %>
+          <ul class="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row 
                    md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-800
                    dark:border-gray-700">
-          <li>
-            <%= link_to t('shared.navbar.links.login'), new_user_session_path,
-                        class: 'block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 
+            <li>
+              <%= link_to t('shared.navbar.links.login'), new_user_session_path,
+                          class: 'block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 
                                 dark:text-white md:dark:text-blue-500' %>
-          </li>
-        </ul>
-      <% end %>
+            </li>
+          </ul>
+        <% end %>
+      </div>
     </div>
   </div>
 </nav>
