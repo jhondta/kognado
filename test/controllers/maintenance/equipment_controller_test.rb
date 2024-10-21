@@ -19,7 +19,7 @@ class Maintenance::EquipmentControllerTest < ActionDispatch::IntegrationTest
 
   test 'should create maintenance_equipment' do
     assert_difference('Maintenance::Equipment.count') do
-      post maintenance_equipment_index_url, params: { maintenance_equipment: { description: @maintenance_equipment.description, estado: @maintenance_equipment.estado, name: @maintenance_equipment.name, ubicación: @maintenance_equipment.ubicación } }
+      post maintenance_equipment_index_url, params: { maintenance_equipment: { description: @maintenance_equipment.description, location: @maintenance_equipment.location, name: @maintenance_equipment.name, status: @maintenance_equipment.status } }
     end
 
     assert_redirected_to maintenance_equipment_url(Maintenance::Equipment.last)
@@ -36,7 +36,7 @@ class Maintenance::EquipmentControllerTest < ActionDispatch::IntegrationTest
   end
 
   test 'should update maintenance_equipment' do
-    patch maintenance_equipment_url(@maintenance_equipment), params: { maintenance_equipment: { description: @maintenance_equipment.description, estado: @maintenance_equipment.estado, name: @maintenance_equipment.name, ubicación: @maintenance_equipment.ubicación } }
+    patch maintenance_equipment_url(@maintenance_equipment), params: { maintenance_equipment: { description: @maintenance_equipment.description, location: @maintenance_equipment.location, name: @maintenance_equipment.name, status: @maintenance_equipment.status } }
     assert_redirected_to maintenance_equipment_url(@maintenance_equipment)
   end
 

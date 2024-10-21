@@ -3,11 +3,11 @@
 one:
   name: MyString
   description: MyText
-  ubicación: MyString
-  estado: MyString
+  location: MyString
+  status: MyString
 
 two:
   name: MyString
   description: MyText
-  ubicación: MyString
-  estado: MyString
+  location: MyString
+  status: MyString

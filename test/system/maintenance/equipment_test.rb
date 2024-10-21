@@ -17,9 +17,9 @@ class Maintenance::EquipmentTest < ApplicationSystemTestCase
     click_on 'New equipment'
 
     fill_in 'Description', with: @maintenance_equipment.description
-    fill_in 'Estado', with: @maintenance_equipment.estado
+    fill_in 'Location', with: @maintenance_equipment.location
     fill_in 'Name', with: @maintenance_equipment.name
-    fill_in 'Ubicación', with: @maintenance_equipment.ubicación
+    fill_in 'Status', with: @maintenance_equipment.status
     click_on 'Create Equipment'
 
     assert_text 'Equipment was successfully created'
@@ -31,9 +31,9 @@ class Maintenance::EquipmentTest < ApplicationSystemTestCase
     click_on 'Edit this equipment', match: :first
 
     fill_in 'Description', with: @maintenance_equipment.description
-    fill_in 'Estado', with: @maintenance_equipment.estado
+    fill_in 'Location', with: @maintenance_equipment.location
     fill_in 'Name', with: @maintenance_equipment.name
-    fill_in 'Ubicación', with: @maintenance_equipment.ubicación
+    fill_in 'Status', with: @maintenance_equipment.status
     click_on 'Update Equipment'
 
     assert_text 'Equipment was successfully updated'

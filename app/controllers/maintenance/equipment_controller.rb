@@ -67,6 +67,6 @@ class Maintenance::EquipmentController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def maintenance_equipment_params
-      params.require(:maintenance_equipment).permit(:name, :description, :image, :ubicación, :estado)
+      params.require(:maintenance_equipment).permit(:name, :description, :image, :location, :status)
     end
 end
