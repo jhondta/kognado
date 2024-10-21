@@ -35,50 +35,65 @@ function themeToggle() {
 
     const themeToggleBtn = document.getElementById('theme-toggle');
 
-    if (themeToggleBtn) {
-        themeToggleBtn.addEventListener('click', function () {
+    let event = new Event('dark-mode');
 
-            // toggle icons inside button
-            themeToggleDarkIcon.classList.toggle('hidden');
-            themeToggleLightIcon.classList.toggle('hidden');
+    themeToggleBtn.addEventListener('click', function () {
 
-            // if set via local storage previously
-            if (localStorage.getItem('color-theme')) {
-                if (localStorage.getItem('color-theme') === 'light') {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                }
+        // toggle icons inside button
+        themeToggleDarkIcon.classList.toggle('hidden');
+        themeToggleLightIcon.classList.toggle('hidden');
 
-                // if NOT set via local storage previously
+        // if set via local storage previously
+        if (localStorage.getItem('color-theme')) {
+            if (localStorage.getItem('color-theme') === 'light') {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
             } else {
-                if (document.documentElement.classList.contains('dark')) {
-                    document.documentElement.classList.remove('dark');
-                    localStorage.setItem('color-theme', 'light');
-                } else {
-                    document.documentElement.classList.add('dark');
-                    localStorage.setItem('color-theme', 'dark');
-                }
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
             }
-        })
-    } else {
-        console.error('themeToggleBtn element not found');
-    }
+
+            // if NOT set via local storage previously
+        } else {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        }
+        document.dispatchEvent(event);
+    });
 }
 
-// Function to show the sidebar if the screen is larger than 768px
+function toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose) {
+    sidebar.classList.toggle('hidden');
+    sidebarBackdrop.classList.toggle('hidden');
+    toggleSidebarMobileHamburger.classList.toggle('hidden');
+    toggleSidebarMobileClose.classList.toggle('hidden');
+}
+
 function showSidebar() {
-    const sidebar = document.getElementById('drawer-navigation');
+    const sidebar = document.getElementById('sidebar');
+
     if (sidebar) {
-        if (window.innerWidth > 768) {
-            sidebar.classList.remove('-translate-x-full');
-        } else {
-            sidebar.classList.add('-translate-x-full');
-        }
-    } else {
-        // No enviar error si no se encuentra el elemento
-        return;
+        const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
+        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+        const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
+        const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
+        const toggleSidebarMobileSearch = document.getElementById('toggleSidebarMobileSearch');
+
+        toggleSidebarMobileSearch.addEventListener('click', () => {
+            toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+        });
+
+        toggleSidebarMobileEl.addEventListener('click', () => {
+            toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+        });
+
+        sidebarBackdrop.addEventListener('click', () => {
+            toggleSidebarMobile(sidebar, sidebarBackdrop, toggleSidebarMobileHamburger, toggleSidebarMobileClose);
+        });
     }
 }
