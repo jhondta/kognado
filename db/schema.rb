@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_20_122522) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_21_082934) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -157,6 +157,35 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_122522) do
     t.index ["name"], name: "index_languages_on_name", unique: true
   end
 
+  create_table "maintenance_equipment", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.text "description", default: "", null: false
+    t.string "location", limit: 255, default: "", null: false
+    t.string "status", default: "active", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_maintenance_equipment_on_name", unique: true
+  end
+
+  create_table "maintenance_frequencies", force: :cascade do |t|
+    t.string "name", limit: 100, null: false
+    t.string "description", limit: 255, default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_maintenance_frequencies_on_name", unique: true
+  end
+
+  create_table "maintenance_responsibles", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "speciality", limit: 255, default: "", null: false
+    t.string "status", default: "active", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["speciality"], name: "index_maintenance_responsibles_on_speciality"
+    t.index ["status"], name: "index_maintenance_responsibles_on_status"
+    t.index ["user_id"], name: "index_maintenance_responsibles_on_user_id", unique: true
+  end
+
   create_table "measure_unit_types", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
@@ -238,6 +267,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_20_122522) do
   add_foreign_key "inventory_items", "measure_units"
   add_foreign_key "inventory_stocks", "inventory_items"
   add_foreign_key "inventory_stocks", "inventory_warehouses"
+  add_foreign_key "maintenance_responsibles", "users"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"

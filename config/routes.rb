@@ -58,6 +58,8 @@ Rails.application.routes.draw do
   end
 
   namespace :maintenance do
+    resources :frequencies
+    resources :responsibles
     resources :equipment
   end
 end
