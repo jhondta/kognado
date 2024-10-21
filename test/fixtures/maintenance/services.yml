@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  scheduled_date: 2024-10-21 02:39:49
+  maintenance_frequency: one
+  maintenance_responsible: one
+  status: MyString
+  resources: MyText
+
+two:
+  name: MyString
+  description: MyText
+  scheduled_date: 2024-10-21 02:39:49
+  maintenance_frequency: two
+  maintenance_responsible: two
+  status: MyString
+  resources: MyText

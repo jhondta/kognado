@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_21_082934) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_21_083947) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -186,6 +186,23 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_082934) do
     t.index ["user_id"], name: "index_maintenance_responsibles_on_user_id", unique: true
   end
 
+  create_table "maintenance_services", force: :cascade do |t|
+    t.string "name", limit: 255, null: false
+    t.text "description", default: "", null: false
+    t.datetime "scheduled_date", default: -> { "CURRENT_TIMESTAMP" }, null: false
+    t.bigint "maintenance_frequency_id", null: false
+    t.bigint "maintenance_responsible_id", null: false
+    t.string "status", default: "active", null: false
+    t.text "resources", default: "", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["maintenance_frequency_id"], name: "index_maintenance_services_on_maintenance_frequency_id"
+    t.index ["maintenance_responsible_id"], name: "index_maintenance_services_on_maintenance_responsible_id"
+    t.index ["name"], name: "index_maintenance_services_on_name", unique: true
+    t.index ["scheduled_date"], name: "index_maintenance_services_on_scheduled_date"
+    t.index ["status"], name: "index_maintenance_services_on_status"
+  end
+
   create_table "measure_unit_types", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
@@ -268,6 +285,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_21_082934) do
   add_foreign_key "inventory_stocks", "inventory_items"
   add_foreign_key "inventory_stocks", "inventory_warehouses"
   add_foreign_key "maintenance_responsibles", "users"
+  add_foreign_key "maintenance_services", "maintenance_frequencies"
+  add_foreign_key "maintenance_services", "maintenance_responsibles"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"
