@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_22_122544) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_22_123519) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -202,6 +202,32 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_122544) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "maintenance_assets", force: :cascade do |t|
+    t.string "code", limit: 10, null: false
+    t.string "name", limit: 100, null: false
+    t.bigint "maintenance_asset_type_id", null: false
+    t.bigint "configuration_area_id", null: false
+    t.bigint "maintenance_manufacturer_id", null: false
+    t.string "model"
+    t.string "serial_number"
+    t.date "manufacturing_date"
+    t.date "purchase_date"
+    t.date "warranty_expiration"
+    t.string "status"
+    t.string "criticality_level"
+    t.jsonb "technical_specs"
+    t.jsonb "operation_conditions"
+    t.text "physical_locaion"
+    t.text "notes"
+    t.boolean "active"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_maintenance_assets_on_code", unique: true
+    t.index ["configuration_area_id"], name: "index_maintenance_assets_on_configuration_area_id"
+    t.index ["maintenance_asset_type_id"], name: "index_maintenance_assets_on_maintenance_asset_type_id"
+    t.index ["maintenance_manufacturer_id"], name: "index_maintenance_assets_on_maintenance_manufacturer_id"
+  end
+
   create_table "maintenance_equipment", force: :cascade do |t|
     t.string "name", limit: 100, null: false
     t.text "description", default: "", null: false
@@ -345,6 +371,9 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_122544) do
   add_foreign_key "inventory_items", "measure_units"
   add_foreign_key "inventory_stocks", "inventory_items"
   add_foreign_key "inventory_stocks", "inventory_warehouses"
+  add_foreign_key "maintenance_assets", "configuration_areas"
+  add_foreign_key "maintenance_assets", "maintenance_asset_types"
+  add_foreign_key "maintenance_assets", "maintenance_manufacturers"
   add_foreign_key "maintenance_responsibles", "users"
   add_foreign_key "maintenance_services", "maintenance_frequencies"
   add_foreign_key "maintenance_services", "maintenance_responsibles"
