@@ -4,7 +4,7 @@
     <ul class="pb-2 space-y-2">
       <li>
         <form action="#" method="GET" class="lg:hidden">
-          <label for="mobile-search" class="sr-only">Search</label>
+          <label for="mobile-search" class="sr-only">Buscar</label>
           <div class="relative">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20"
@@ -60,112 +60,32 @@
         </button>
         <ul id="dropdown-finance" class="hidden py-2 space-y-1">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Contabilidad General
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Plan de cuentas', '#',
+            <%= link_to 'Contabilidad', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Libro mayor', '#',
+            <%= link_to 'Gestión de pagos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Asientos contables', '#',
+            <%= link_to 'Tesorería', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 mt-2 text-sm leading-5 font-medium uppercase text-gray-500">
-              Cuentas por pagar
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Facturas de proveedores', '#',
+            <%= link_to 'Presupuestos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
           </li>
           <li>
-            <%= link_to 'Pagos programados', '#',
+            <%= link_to 'Impuestos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
           </li>
           <li>
-            <h5 class="p-2 pl-11 mt-2 text-sm leading-5 font-medium uppercase text-gray-500">
-              Cuentas por cobrar
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Facturas a clientes', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <%= link_to 'Seguimiento de pagos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 mt-2 text-sm leading-5 font-medium uppercase text-gray-500">
-              Tesorería
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Flujo de caja', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <%= link_to 'Conciliaciones bancarias', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 mt-2 text-sm leading-5 font-medium uppercase text-gray-500">
-              Presupuestos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Creación de presupuestos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <%= link_to 'Seguimiento presupuestario', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 mt-2 text-sm leading-5 font-medium uppercase text-gray-500">
-              Informes Financieros
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Balance general', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <%= link_to 'Estado de resultados', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-
-          </li>
-          <li>
-            <%= link_to 'Flujo de efectivo', '#',
+            <%= link_to 'Reportes financieros', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
 
@@ -195,82 +115,22 @@
         </button>
         <ul id="dropdown-hhrr" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Gestión de personal
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Datos de empleados', '#',
+            <%= link_to 'Empleados', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Contratos', '#',
+            <%= link_to 'Nómina', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Organigrama', '#',
+            <%= link_to 'Gestión de personal', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Nómina
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Cálculo de salarios', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Deducciones e impuestos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Evaluación de desempeño
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Objetivos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Revisiones', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Capacitación
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Cursos y programas', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Seguimiento de formación', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Reclutamiento
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Vacantes', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Proceso de selección', '#',
+            <%= link_to 'Reclutamiento', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
@@ -300,77 +160,27 @@
         </button>
         <ul id="dropdown-sales" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Gestión de clientes
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Catálogo de clientes', '#',
+            <%= link_to 'Clientes', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Historial de interacciones', '#',
+            <%= link_to 'Oportunidades', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Oportunidades de venta
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Canalización de ventas', '#',
+            <%= link_to 'Ventas', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Seguimiento de leads', '#',
+            <%= link_to 'Servicio al cliente', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Pedidos de venta
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Creación de pedidos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Estado de pedidos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Facturación
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Generación de facturas', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Seguimiento de pagos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Marketing
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Campañas', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Análisis de resultados', '#',
+            <%= link_to 'Marketing', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
@@ -398,47 +208,17 @@
         </button>
         <ul id="dropdown-purchases" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Proveedores
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Catálogo de proveedores', '#',
+            <%= link_to 'Proveedores', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Evaluación de proveedores', '#',
+            <%= link_to 'Proceso de compra', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Órdenes de compra
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Creación de órdenes', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Seguimiento de órdenes', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Recepción de mercancías
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Registro de mercancías', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Control de calidad', '#',
+            <%= link_to 'Recepción', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
@@ -468,47 +248,17 @@
         </button>
         <ul id="dropdown-inventory" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Control de stock
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Niveles de inventario', '#',
+            <%= link_to 'Productos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Valoración de inventario', '#',
+            <%= link_to 'Almacenes', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Gestión de almacenes
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Ubicaciones', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Picking y packing', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Movimientos de inventario
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Transferencias', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Ajustes', '#',
+            <%= link_to 'Movimientos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
@@ -539,107 +289,22 @@
         </button>
         <ul id="dropdown-operations" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Producción
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Ordenes de producción', '#',
+            <%= link_to 'Producción', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Planificación de producción', '#',
+            <%= link_to 'Mantenimiento', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Control de costos', '#',
+            <%= link_to 'Activos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Mantenimiento
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Programación de mantenimientos', maintenance_services_path,
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Órdenes de trabajo', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Historial de mantenimientos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Gestión de activos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Catálogo de activos', inventory_items_path,
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Depreciación', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Mantenimiento preventivo', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Control de calidad
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Definición de estándares', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Inspecciones y pruebas', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Planificación de recursos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Capacidad de producción', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Asignación de recursos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Logística
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Gestión de rutas', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Seguimiento de envíos', '#',
+            <%= link_to 'Logística', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
@@ -666,47 +331,17 @@
         </button>
         <ul id="dropdown-projects" class="hidden py-2 space-y-2">
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Gestión de proyectos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Planificación de proyectos', '#',
+            <%= link_to 'Gestión', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <%= link_to 'Seguimiento de tareas', '#',
+            <%= link_to 'Recursos', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
           <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Asignación de recursos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Calendario de recursos', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Carga de trabajo', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <h5 class="p-2 pl-11 text-sm leading-5 font-medium uppercase text-gray-500">
-              Costos de proyectos
-            </h5>
-          </li>
-          <li>
-            <%= link_to 'Presupuesto del proyecto', '#',
-                        class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
-                                pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
-          </li>
-          <li>
-            <%= link_to 'Control de gastos', '#',
+            <%= link_to 'Control', '#',
                         class: 'flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg
                                 pl-11 group hover:bg-gray-100 dark:text-gray-200 dark:hover:bg-gray-700' %>
           </li>
