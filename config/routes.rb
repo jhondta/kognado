@@ -37,16 +37,11 @@ Rails.application.routes.draw do
                            sign_out: 'logout',
                            sign_up: 'signup' }
 
+  namespace :configuration do
+    resources :plants
+  end
+
   # Defines the resources
-  resources :measure_unit_types
-  resources :measure_units
-  resources :country_languages
-  resources :country_timezones
-  resources :country_currencies
-  resources :languages
-  resources :timezones
-  resources :currencies
-  resources :countries
   resources :user_profiles
 
   namespace :inventory do
