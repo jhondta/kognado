@@ -6,6 +6,7 @@ class Maintenance::Asset < ApplicationRecord
              retired: 'retired' }.freeze
   CRITICALITY_LEVEL = { low: 'low', medium: 'medium', high: 'high',
                         critical: 'critical' }.freeze
+
   # Associations
   belongs_to :asset_type, class_name: 'Maintenance::AssetType',
              foreign_key: :maintenance_asset_type_id
