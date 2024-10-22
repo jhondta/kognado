@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_22_114542) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_22_121321) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -46,10 +46,12 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_114542) do
     t.string "code", limit: 10, null: false
     t.string "name", limit: 100, null: false
     t.text "description", default: "", null: false
+    t.bigint "configuration_plant_id", null: false
     t.boolean "active", default: true, null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_configuration_areas_on_code", unique: true
+    t.index ["configuration_plant_id"], name: "index_configuration_areas_on_configuration_plant_id"
   end
 
   create_table "configuration_plants", force: :cascade do |t|
@@ -60,6 +62,18 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_114542) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["code"], name: "index_configuration_plants_on_code", unique: true
+  end
+
+  create_table "configuration_production_lines", force: :cascade do |t|
+    t.string "code", limit: 10, null: false
+    t.string "name", limit: 100, null: false
+    t.text "description", default: "", null: false
+    t.bigint "configuration_area_id", null: false
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["code"], name: "index_configuration_production_lines_on_code", unique: true
+    t.index ["configuration_area_id"], name: "index_configuration_production_lines_on_configuration_area_id"
   end
 
   create_table "countries", force: :cascade do |t|
@@ -293,6 +307,8 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_114542) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "configuration_areas", "configuration_plants"
+  add_foreign_key "configuration_production_lines", "configuration_areas"
   add_foreign_key "country_currencies", "countries"
   add_foreign_key "country_currencies", "currencies"
   add_foreign_key "country_languages", "countries"

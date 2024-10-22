@@ -38,6 +38,7 @@ Rails.application.routes.draw do
                            sign_up: 'signup' }
 
   namespace :configuration do
+    resources :production_lines
     resources :areas
     resources :plants
   end
