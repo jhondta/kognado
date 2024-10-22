@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maintenance_asset: one
+  maintenance_technician: one
+
+two:
+  maintenance_asset: two
+  maintenance_technician: two
