@@ -19,7 +19,7 @@ class Maintenance::AssetDocumentsControllerTest < ActionDispatch::IntegrationTes
 
   test 'should create maintenance_asset_document' do
     assert_difference('Maintenance::AssetDocument.count') do
-      post maintenance_asset_documents_url, params: { maintenance_asset_document: { active: @maintenance_asset_document.active, description: @maintenance_asset_document.description, document_type: @maintenance_asset_document.document_type, expiration_date: @maintenance_asset_document.expiration_date, maintenance_assets_id: @maintenance_asset_document.maintenance_assets_id, name: @maintenance_asset_document.name, version: @maintenance_asset_document.version } }
+      post maintenance_asset_documents_url, params: { maintenance_asset_document: { active: @maintenance_asset_document.active, description: @maintenance_asset_document.description, document_type: @maintenance_asset_document.document_type, expiration_date: @maintenance_asset_document.expiration_date, maintenance_asset_id: @maintenance_asset_document.maintenance_asset_id, name: @maintenance_asset_document.name, version: @maintenance_asset_document.version } }
     end
 
     assert_redirected_to maintenance_asset_document_url(Maintenance::AssetDocument.last)
@@ -36,7 +36,7 @@ class Maintenance::AssetDocumentsControllerTest < ActionDispatch::IntegrationTes
   end
 
   test 'should update maintenance_asset_document' do
-    patch maintenance_asset_document_url(@maintenance_asset_document), params: { maintenance_asset_document: { active: @maintenance_asset_document.active, description: @maintenance_asset_document.description, document_type: @maintenance_asset_document.document_type, expiration_date: @maintenance_asset_document.expiration_date, maintenance_assets_id: @maintenance_asset_document.maintenance_assets_id, name: @maintenance_asset_document.name, version: @maintenance_asset_document.version } }
+    patch maintenance_asset_document_url(@maintenance_asset_document), params: { maintenance_asset_document: { active: @maintenance_asset_document.active, description: @maintenance_asset_document.description, document_type: @maintenance_asset_document.document_type, expiration_date: @maintenance_asset_document.expiration_date, maintenance_asset_id: @maintenance_asset_document.maintenance_asset_id, name: @maintenance_asset_document.name, version: @maintenance_asset_document.version } }
     assert_redirected_to maintenance_asset_document_url(@maintenance_asset_document)
   end
 

@@ -20,7 +20,7 @@ class Maintenance::AssetDocumentsTest < ApplicationSystemTestCase
     fill_in 'Description', with: @maintenance_asset_document.description
     fill_in 'Document type', with: @maintenance_asset_document.document_type
     fill_in 'Expiration date', with: @maintenance_asset_document.expiration_date
-    fill_in 'Maintenance assets', with: @maintenance_asset_document.maintenance_assets_id
+    fill_in 'Maintenance asset', with: @maintenance_asset_document.maintenance_asset_id
     fill_in 'Name', with: @maintenance_asset_document.name
     fill_in 'Version', with: @maintenance_asset_document.version
     click_on 'Create Asset document'
@@ -37,7 +37,7 @@ class Maintenance::AssetDocumentsTest < ApplicationSystemTestCase
     fill_in 'Description', with: @maintenance_asset_document.description
     fill_in 'Document type', with: @maintenance_asset_document.document_type
     fill_in 'Expiration date', with: @maintenance_asset_document.expiration_date
-    fill_in 'Maintenance assets', with: @maintenance_asset_document.maintenance_assets_id
+    fill_in 'Maintenance asset', with: @maintenance_asset_document.maintenance_asset_id
     fill_in 'Name', with: @maintenance_asset_document.name
     fill_in 'Version', with: @maintenance_asset_document.version
     click_on 'Update Asset document'

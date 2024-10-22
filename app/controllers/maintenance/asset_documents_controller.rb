@@ -67,6 +67,6 @@ class Maintenance::AssetDocumentsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def maintenance_asset_document_params
-      params.require(:maintenance_asset_document).permit(:maintenance_assets_id, :document_type, :name, :description, :version, :expiration_date, :active)
+      params.require(:maintenance_asset_document).permit(:maintenance_asset_id, :document_type, :name, :description, :version, :expiration_date, :active)
     end
 end
