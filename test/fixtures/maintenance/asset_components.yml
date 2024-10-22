@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maintenance_assets: one
+  name: MyString
+  description: MyText
+  quantity: 1
+  specifications: 
+  replacement_period: 1
+  active: false
+
+two:
+  maintenance_assets: two
+  name: MyString
+  description: MyText
+  quantity: 1
+  specifications: 
+  replacement_period: 1
+  active: false
