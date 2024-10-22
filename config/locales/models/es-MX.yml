@@ -4,7 +4,26 @@ es-MX:
       user:
         one: "Usuario"
         other: "Usuarios"
+      maintenance/service:
+        one: "Servicio de mantenimiento"
+        other: "Servicios de mantenimiento"
     attributes:
       user:
         name: "Nombre"
         email: "Correo electrónico"
+      maintenance/service:
+        name: "Nombre"
+        description: "Descripción"
+        scheduled_date: "Fecha programada"
+        maintenance_frequency_id: "Frecuencia"
+        maintenance_responsible_id: "Responsable"
+        status: "Estado"
+        resources: "Recursos"
+    enums:
+      maintenance/service:
+        status:
+          inactive: "Inactivo"
+          active: "Activo"
+          served: "Servido"
+          cancelled: "Cancelado"
+          expired: "Expirado"

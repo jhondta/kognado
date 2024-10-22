@@ -5,7 +5,7 @@ class Maintenance::ServicesController < ApplicationController
 
   # GET /maintenance/services or /maintenance/services.json
   def index
-    @maintenance_services = Maintenance::Service.all
+    @pagy, @records = pagy(Maintenance::Service.all)
   end
 
   # GET /maintenance/services/1 or /maintenance/services/1.json
@@ -27,7 +27,8 @@ class Maintenance::ServicesController < ApplicationController
 
     respond_to do |format|
       if @maintenance_service.save
-        format.html { redirect_to @maintenance_service, notice: 'Service was successfully created.' }
+        format.html { redirect_to maintenance_services_path,
+                                  notice: 'Servicio creado.' }
         format.json { render :show, status: :created, location: @maintenance_service }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -67,6 +68,9 @@ class Maintenance::ServicesController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def maintenance_service_params
-      params.require(:maintenance_service).permit(:name, :description, :scheduled_date, :maintenance_frequency_id, :maintenance_responsible_id, :status, :resources)
+      permitted_params = %i[name description scheduled_date
+                            maintenance_frequency_id maintenance_responsible_id
+                            status resources]
+      params.require(:maintenance_service).permit(permitted_params)
     end
 end

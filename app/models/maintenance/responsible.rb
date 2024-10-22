@@ -12,4 +12,7 @@ class Maintenance::Responsible < ApplicationRecord
   # Scopes
   scope :active, -> { where(status: 'active') }
   scope :inactive, -> { where(status: 'inactive') }
+
+  # Delegates
+  delegate :email, to: :user
 end

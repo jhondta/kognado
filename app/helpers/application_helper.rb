@@ -19,4 +19,17 @@ module ApplicationHelper
                'warning' => 'yellow' }
     colors[type] || 'blue'
   end
+
+  # Returns the enum options for select
+  # Example: enum_options_for_select(User, :role)
+  # => [["Admin", "admin"], ["User", "user"]]
+  # @param class_name [Class]
+  # @param enum [Symbol]
+  # @return [Array]
+  #
+  def enum_options_for_select(class_name, enum)
+    class_name.send(enum.to_s.pluralize).map do |key, _|
+      [I18n.t("activerecord.enums.#{class_name.model_name.i18n_key}.#{enum}.#{key}"), key]
+    end
+  end
 end
