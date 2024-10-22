@@ -46,8 +46,10 @@ gem 'rails-i18n'
 # Use http_accept_language to detect the user's preferred language
 gem 'http_accept_language'
 
-# USe Pagy for pagination [https://ddnexus.github.io/pagy/]
+# Use Pagy for pagination [https://ddnexus.github.io/pagy/]
 gem 'pagy'
+# Use PaperTrail for tracking changes
+gem 'papertrail'
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
