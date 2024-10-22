@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  name: MyString
+  description: MyText
+  requires_calibration: false
+  maintenance_frequency: 1
+  active: false
+
+two:
+  code: MyString
+  name: MyString
+  description: MyText
+  requires_calibration: false
+  maintenance_frequency: 1
+  active: false
