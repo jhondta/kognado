@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_22_165132) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_22_165912) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -324,6 +324,16 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_165132) do
     t.index ["user_id"], name: "index_maintenance_techinicans_on_user_id"
   end
 
+  create_table "maintenance_technicians", force: :cascade do |t|
+    t.bigint "user_id", null: false
+    t.string "specialty", limit: 100, null: false
+    t.string "certificacion_level"
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_maintenance_technicians_on_user_id"
+  end
+
   create_table "measure_unit_types", force: :cascade do |t|
     t.string "name", limit: 255, null: false
     t.datetime "created_at", null: false
@@ -426,6 +436,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_165132) do
   add_foreign_key "maintenance_services", "maintenance_frequencies"
   add_foreign_key "maintenance_services", "maintenance_responsibles"
   add_foreign_key "maintenance_techinicans", "users"
+  add_foreign_key "maintenance_technicians", "users"
   add_foreign_key "measure_units", "measure_unit_types"
   add_foreign_key "user_profiles", "countries"
   add_foreign_key "user_profiles", "users"

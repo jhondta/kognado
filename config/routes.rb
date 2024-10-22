@@ -55,7 +55,7 @@ Rails.application.routes.draw do
   end
 
   namespace :maintenance do
-    resources :techinicans
+    resources :technicians
     resources :asset_components
     resources :asset_documents
     resources :assets

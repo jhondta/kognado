@@ -1,10 +1,10 @@
-<%= form_with(model: maintenance_techinican, class: "contents") do |form| %>
-  <% if maintenance_techinican.errors.any? %>
+<%= form_with(model: maintenance_technician, class: "contents") do |form| %>
+  <% if maintenance_technician.errors.any? %>
     <div id="error_explanation" class="bg-red-50 text-red-500 px-3 py-2 font-medium rounded-lg mt-3">
-      <h2><%= pluralize(maintenance_techinican.errors.count, "error") %> prohibited this maintenance_techinican from being saved:</h2>
+      <h2><%= pluralize(maintenance_technician.errors.count, "error") %> prohibited this maintenance_technician from being saved:</h2>
 
       <ul>
-        <% maintenance_techinican.errors.each do |error| %>
+        <% maintenance_technician.errors.each do |error| %>
           <li><%= error.full_message %></li>
         <% end %>
       </ul>

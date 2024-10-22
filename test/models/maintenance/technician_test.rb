@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class Maintenance::TechinicanTest < ActiveSupport::TestCase
+class Maintenance::TechnicianTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

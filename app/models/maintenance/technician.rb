@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
-class Maintenance::Techinican < ApplicationRecord
+class Maintenance::Technician < ApplicationRecord
   belongs_to :user
 end
