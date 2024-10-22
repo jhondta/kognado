@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  maintenance_assets: one
+  document_type: MyString
+  name: MyString
+  description: MyText
+  version: MyString
+  expiration_date: 2024-10-22
+  active: false
+
+two:
+  maintenance_assets: two
+  document_type: MyString
+  name: MyString
+  description: MyText
+  version: MyString
+  expiration_date: 2024-10-22
+  active: false

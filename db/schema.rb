@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_22_123519) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_22_124248) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -189,6 +189,19 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_123519) do
     t.index ["iso_code2"], name: "index_languages_on_iso_code2", unique: true
     t.index ["iso_code3"], name: "index_languages_on_iso_code3", unique: true
     t.index ["name"], name: "index_languages_on_name", unique: true
+  end
+
+  create_table "maintenance_asset_documents", force: :cascade do |t|
+    t.bigint "maintenance_assets_id", null: false
+    t.string "document_type", limit: 100, null: false
+    t.string "name", limit: 100, null: false
+    t.text "description"
+    t.string "version"
+    t.date "expiration_date"
+    t.boolean "active", default: true, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["maintenance_assets_id"], name: "index_maintenance_asset_documents_on_maintenance_assets_id"
   end
 
   create_table "maintenance_asset_types", force: :cascade do |t|
@@ -371,6 +384,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_123519) do
   add_foreign_key "inventory_items", "measure_units"
   add_foreign_key "inventory_stocks", "inventory_items"
   add_foreign_key "inventory_stocks", "inventory_warehouses"
+  add_foreign_key "maintenance_asset_documents", "maintenance_assets", column: "maintenance_assets_id"
   add_foreign_key "maintenance_assets", "configuration_areas"
   add_foreign_key "maintenance_assets", "maintenance_asset_types"
   add_foreign_key "maintenance_assets", "maintenance_manufacturers"
