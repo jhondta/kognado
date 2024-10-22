@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   end
 
   namespace :maintenance do
+    resources :manufacturers
     resources :asset_types
     resources :services
     resources :frequencies
