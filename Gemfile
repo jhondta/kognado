@@ -49,7 +49,7 @@ gem 'http_accept_language'
 # Use Pagy for pagination [https://ddnexus.github.io/pagy/]
 gem 'pagy'
 # Use PaperTrail for tracking changes
-gem 'papertrail'
+gem 'paper_trail'
 
 group :development, :test do
   # Static analysis for security vulnerabilities [https://brakemanscanner.org/]
