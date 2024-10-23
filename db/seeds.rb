@@ -11,3 +11,5 @@ load Rails.root.join('db', 'seeds', 'default.rb')
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+
+load Rails.root.join('db', 'seeds', 'maintenance.rb')

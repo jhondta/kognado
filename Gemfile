@@ -60,6 +60,10 @@ group :development, :test do
   gem 'csv'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri windows], require: 'debug/prelude'
+  # Use Faker for seeding data
+  gem 'faker'
+  # Use FactoryBot for seeding data
+  gem 'factory_bot_rails'
   # Use Letter Opener for previewing emails in the browser
   gem 'letter_opener'
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
