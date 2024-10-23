@@ -50,8 +50,7 @@ es-MX:
           expired: "Expirado"
       maintenance/asset:
         status:
-          inactive: "Inactivo"
           active: "Activo"
-          served: "Servido"
-          cancelled: "Cancelado"
-          expired: "Expirado"
+          inactive: "Inactivo"
+          maintenance: "Mantenimiento"
+          retired: "Retirado"
