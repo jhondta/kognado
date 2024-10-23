@@ -35,3 +35,7 @@
         }
     }
 }
+
+.dark [type=checkbox]:checked {
+    background-size: 100% 100%;
+}
