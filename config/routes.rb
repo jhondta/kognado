@@ -55,11 +55,14 @@ Rails.application.routes.draw do
   end
 
   namespace :maintenance do
-    resources :asset_assignees
+    resources :assets do
+      resources :asset_documents, path: 'documents', shallow: true
+      resources :asset_components, path: 'components', shallow: true
+      resources :asset_assignees, path: 'assignees', shallow: true,
+                only: %i[ index create destroy ]
+    end
+
     resources :technicians
-    resources :asset_components
-    resources :asset_documents
-    resources :assets
     resources :manufacturers
     resources :asset_types
     resources :services
