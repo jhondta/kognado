@@ -9,11 +9,9 @@ class ApplicationRecord < ActiveRecord::Base
   # @return [String]
   def translate_enum(enum_field)
     return nil unless send(enum_field)
-
-    I18n.t(
-      "activerecord.enums.#{self.class.model_name.i18n_key}.#{enum_field}.#{send(enum_field)}",
-      default: send(enum_field).to_s.humanize
-    )
+    model_key = self.class.model_name.i18n_key
+    I18n.t("activerecord.enums.#{model_key}.#{enum_field}.#{send(enum_field)}",
+           default: send(enum_field).to_s.humanize)
   end
 
   # Alias más corto si prefieres una sintaxis más concisa
