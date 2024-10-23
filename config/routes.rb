@@ -37,6 +37,8 @@ Rails.application.routes.draw do
                            sign_out: 'logout',
                            sign_up: 'signup' }
 
+  resources :countries
+
   namespace :configuration do
     resources :production_lines
     resources :areas

@@ -2,10 +2,10 @@
 
 class Maintenance::Asset < ApplicationRecord
   # Constants
-  STATUS = %i[ active inactive maintenance retired ].freeze
+  STATUSES = %i[ active inactive maintenance retired ].freeze
   STATUS_COLORS = { active: 'green', inactive: 'red', maintenance: 'yellow',
                     retired: 'gray' }.freeze
-  CRITICALITY_LEVEL = %i[ low medium high critical ].freeze
+  CRITICALITY_LEVELS = %i[ low medium high critical ].freeze
   CRITICALITY_COLORS = { low: 'green', medium: 'yellow', high: 'orange',
                          critical: 'red' }.freeze
 
@@ -30,8 +30,8 @@ class Maintenance::Asset < ApplicationRecord
   # Validations
 
   # Enums
-  enum status: STATUS
-  enum criticality_level: CRITICALITY_LEVEL
+  enum status: STATUSES
+  enum criticality_level: CRITICALITY_LEVELS
 
   # Delegations
 
