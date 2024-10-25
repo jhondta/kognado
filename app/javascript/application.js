@@ -79,7 +79,7 @@ function showSidebar() {
 
     if (sidebar) {
         const toggleSidebarMobileEl = document.getElementById('toggleSidebarMobile');
-        const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+        const sidebarBackdrop = document.querySelector('[drawer-backdrop]');
         const toggleSidebarMobileHamburger = document.getElementById('toggleSidebarMobileHamburger');
         const toggleSidebarMobileClose = document.getElementById('toggleSidebarMobileClose');
         const toggleSidebarMobileSearch = document.getElementById('toggleSidebarMobileSearch');
