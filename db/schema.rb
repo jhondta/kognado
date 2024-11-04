@@ -252,7 +252,7 @@ ActiveRecord::Schema[7.2].define(version: 2024_10_22_170233) do
     t.string "criticality_level"
     t.jsonb "technical_specs"
     t.jsonb "operation_conditions"
-    t.text "physical_locaion"
+    t.text "physical_location"
     t.text "notes"
     t.boolean "active"
     t.datetime "created_at", null: false

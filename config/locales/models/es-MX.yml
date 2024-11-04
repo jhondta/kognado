@@ -37,7 +37,7 @@ es-MX:
         criticality_level: "Nivel crítico"
         technical_specs: "Especificaciones técnicas"
         operation_conditions: "Condiciones de operación"
-        physical_locaion: "Ubicación física"
+        physical_location: "Ubicación física"
         notes: "Notas"
         active: "Activo"
     enums:

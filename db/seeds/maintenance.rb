@@ -92,7 +92,7 @@ manufacturers = Maintenance::Manufacturer.all
     criticality_level: Maintenance::Asset::CRITICALITY_LEVELS.sample,
     technical_specs: { power: "#{rand(100..500)}W", voltage: "#{rand(110..240)}V" },
     operation_conditions: { temp_range: "#{rand(-10..50)}C", humidity: "#{rand(20..80)}%" },
-    physical_locaion: Faker::Address.secondary_address,
+    physical_location: Faker::Address.secondary_address,
     notes: Faker::Lorem.sentence
   )
 end

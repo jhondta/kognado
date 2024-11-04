@@ -27,7 +27,7 @@ class Maintenance::AssetsTest < ApplicationSystemTestCase
     fill_in 'Name', with: @maintenance_asset.name
     fill_in 'Notes', with: @maintenance_asset.notes
     fill_in 'Operation conditions', with: @maintenance_asset.operation_conditions
-    fill_in 'Physical locaion', with: @maintenance_asset.physical_locaion
+    fill_in 'Physical location', with: @maintenance_asset.physical_location
     fill_in 'Purchase date', with: @maintenance_asset.purchase_date
     fill_in 'Serial number', with: @maintenance_asset.serial_number
     fill_in 'Status', with: @maintenance_asset.status
@@ -54,7 +54,7 @@ class Maintenance::AssetsTest < ApplicationSystemTestCase
     fill_in 'Name', with: @maintenance_asset.name
     fill_in 'Notes', with: @maintenance_asset.notes
     fill_in 'Operation conditions', with: @maintenance_asset.operation_conditions
-    fill_in 'Physical locaion', with: @maintenance_asset.physical_locaion
+    fill_in 'Physical location', with: @maintenance_asset.physical_location
     fill_in 'Purchase date', with: @maintenance_asset.purchase_date
     fill_in 'Serial number', with: @maintenance_asset.serial_number
     fill_in 'Status', with: @maintenance_asset.status

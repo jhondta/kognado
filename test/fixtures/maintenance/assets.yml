@@ -15,7 +15,7 @@ one:
   criticality_level: MyString
   technical_specs: 
   operation_conditions: 
-  physical_locaion: MyText
+  physical_location: MyText
   notes: MyText
   active: false
 
@@ -34,6 +34,6 @@ two:
   criticality_level: MyString
   technical_specs: 
   operation_conditions: 
-  physical_locaion: MyText
+  physical_location: MyText
   notes: MyText
   active: false

@@ -17,7 +17,7 @@ class CreateMaintenanceAssets < ActiveRecord::Migration[7.2]
       t.string :criticality_level
       t.jsonb :technical_specs
       t.jsonb :operation_conditions
-      t.text :physical_locaion
+      t.text :physical_location
       t.text :notes
 
       t.timestamps

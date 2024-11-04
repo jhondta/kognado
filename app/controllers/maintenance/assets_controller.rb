@@ -67,6 +67,6 @@ class Maintenance::AssetsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def maintenance_asset_params
-      params.require(:maintenance_asset).permit(:code, :name, :maintenance_asset_type_id, :configuration_area_id, :maintenance_manufacturer_id, :model, :serial_number, :manufacturing_date, :purchase_date, :warranty_expiration, :status, :criticality_level, :technical_specs, :operation_conditions, :physical_locaion, :notes, :active)
+      params.require(:maintenance_asset).permit(:code, :name, :maintenance_asset_type_id, :configuration_area_id, :maintenance_manufacturer_id, :model, :serial_number, :manufacturing_date, :purchase_date, :warranty_expiration, :status, :criticality_level, :technical_specs, :operation_conditions, :physical_location, :notes, :active)
     end
 end
