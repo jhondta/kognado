@@ -2,6 +2,6 @@
 
 class Configuration::ProductionLine < ApplicationRecord
   # Associations
-  belongs_to :configuration_area, class_name: 'Configuration::Area',
+  belongs_to :area, class_name: 'Configuration::Area',
              foreign_key: :configuration_area_id
 end

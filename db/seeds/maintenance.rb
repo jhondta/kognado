@@ -75,13 +75,14 @@ end
 
 # Datos de prueba para la tabla assets
 asset_types = Maintenance::AssetType.all
+production_lines = Configuration::ProductionLine.includes(area: :plant)
 manufacturers = Maintenance::Manufacturer.all
 50.times do
   Maintenance::Asset.create!(
-    code: Faker::Alphanumeric.unique.alpha(number: 5).upcase,
+    code: Faker::Alphanumeric.unique.alpha(number: 3).upcase,
     name: Faker::Appliance.equipment,
     maintenance_asset_type_id: asset_types.sample.id,
-    configuration_area_id: areas.sample.id,
+    configuration_production_line_id: production_lines.sample.id,
     maintenance_manufacturer_id: manufacturers.sample.id,
     model: Faker::Alphanumeric.alpha(number: 8).upcase,
     serial_number: Faker::Alphanumeric.unique.alpha(number: 12).upcase,

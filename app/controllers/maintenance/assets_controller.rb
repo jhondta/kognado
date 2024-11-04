@@ -5,7 +5,8 @@ class Maintenance::AssetsController < ApplicationController
 
   # GET /maintenance/assets or /maintenance/assets.json
   def index
-    @pagy, @records = pagy(Maintenance::Asset.includes(:type).all)
+    includes = [:type, :manufacturer, production_line: { area: :plant }]
+    @pagy, @records = pagy(Maintenance::Asset.includes(includes).all)
   end
 
   # GET /maintenance/assets/1 or /maintenance/assets/1.json

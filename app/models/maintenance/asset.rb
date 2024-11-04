@@ -12,8 +12,8 @@ class Maintenance::Asset < ApplicationRecord
   # Associations
   belongs_to :type, class_name: 'Maintenance::AssetType',
              foreign_key: :maintenance_asset_type_id
-  belongs_to :area, class_name: 'Configuration::Area',
-             foreign_key: :configuration_area_id
+  belongs_to :production_line, class_name: 'Configuration::ProductionLine',
+             foreign_key: :configuration_production_line_id
   belongs_to :manufacturer, class_name: 'Maintenance::Manufacturer',
              foreign_key: :maintenance_manufacturer_id
 
@@ -54,5 +54,12 @@ class Maintenance::Asset < ApplicationRecord
   #
   def criticality_color
     CRITICALITY_COLORS[criticality_level]
+  end
+
+  def full_code
+    line = production_line
+    area = line.area
+    plant = area.plant
+    "#{plant.code}-#{area.code}-#{line.code}-#{code}"
   end
 end
