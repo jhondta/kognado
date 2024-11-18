@@ -192,7 +192,7 @@ GEM
     nokogiri (1.16.7-x86_64-linux)
       racc (~> 1.4)
     orm_adapter (0.5.0)
-    pagy (9.1.1)
+    pagy (9.3.0)
     paper_trail (15.2.0)
       activerecord (>= 6.1)
       request_store (~> 1.4)
